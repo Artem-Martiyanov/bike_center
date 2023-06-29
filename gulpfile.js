@@ -42,7 +42,7 @@ const html = () => {
 
 const copyWithoutProcessing = (done) => {
   gulp.src([
-      'source/fonts/*{woff,woff2}',
+      'source/fonts/*.{woff,woff2}',
       'source/*.ico',
       'source/*.webmanifest'
     ],
