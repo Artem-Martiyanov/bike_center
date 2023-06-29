@@ -1,0 +1,186 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.sup-header {
+  display: flex;
+  align-items: center;
+  min-height: 37px;
+  padding: 5px 0;
+  color: $primary-light-font;
+  background-color: $main-dark;
+  margin-bottom: 10px;
+  
+  &__container {
+    display: flex;
+    align-items: center;
+  
+    @media (max-width: $desktop-1000-width) {
+      flex-wrap: wrap;
+      justify-content: space-between;
+      row-gap: 5px;
+    }
+  }
+  
+  &__location {
+    position: relative;
+    margin: 0 100px 0 0;
+    padding: 5px 5px 5px 21px;
+    min-width: 150px;
+    cursor: pointer;
+    transition: color $transition-duration ease;
+    color: $secondary-light-font;
+    border: none;
+    outline: none;
+    background: none;
+    
+    &::before {
+      @include absolute-vertical-align;
+      position: absolute;
+      left: 0;
+      width: 11px;
+      height: 10px;
+      content: "";
+      transition: background-color $transition-duration ease;
+      
+      background-color: $primary-light-font;
+      mask: url("../images/icons/plain-icon.svg") no-repeat center;
+    }
+    
+    &:hover, &:focus-visible {
+      color: $interactive-color;
+      
+      &::before {
+        background-color: $interactive-color;
+      }
+    }
+    
+    @supports not selector(:focus-visible) {
+      &:focus {
+        color: $interactive-color;
+        
+        &::before {
+          background-color: $interactive-color;
+        }
+      }
+    }
+    
+    &:active {
+      opacity: $button-down-opacity;
+    }
+    
+    @media (max-width: $desktop-1550-width) {
+      margin-right: 30px;
+    }
+  }
+  
+  &__address {
+    margin: 0 35px 0 0;
+    cursor: pointer;
+    transition: color $transition-duration ease;
+    text-decoration: underline;
+    color: $secondary-light-font;
+    border: none;
+    outline: none;
+    background: none;
+    min-width: 172px;
+    
+    &:hover, &:focus-visible {
+      color: $interactive-color;
+    }
+    
+    @supports not selector(:focus-visible) {
+      &:focus {
+        color: $interactive-color;
+      }
+    }
+    
+    &:active {
+      opacity: $button-down-opacity;
+    }
+  }
+  
+  &__phones {
+    @include list-reset();
+    font-size: 14px;
+    font-weight: 700;
+    display: flex;
+    margin-right: auto;
+    column-gap: 30px;
+    
+    @media (max-width: $desktop-1550-width) {
+      flex-direction: column;
+    }
+  
+    @media (max-width: $desktop-1000-width) {
+      flex-direction: row;
+      margin-left: auto;
+      margin-right: 0;
+    }
+  }
+  
+  &__phone {
+    &:not(:last-child) {
+      position: relative;
+      
+      &::after {
+        position: absolute;
+        @include absolute-vertical-align;
+        right: -18px;
+        display: inline-block;
+        content: "|";
+      }
+    }
+    
+    &:last-child {
+      margin-right: 20px;
+    }
+    
+    @media (max-width: $desktop-1550-width) {
+      &:not(:last-child) {
+        &::after {
+          content: "";
+        }
+      }
+    }
+  
+    @media (max-width: $desktop-1000-width) {
+      &:last-child {
+        margin-right: 0;
+      }
+      
+      &:not(:last-child) {
+        &::after {
+          content: "|";
+        }
+      }
+    }
+  }
+  
+  &__phone-link {
+    min-width: 105px;
+    display: inline-block;
+    padding: 3px 0;
+    transition: color $transition-duration ease;
+    text-decoration: none;
+    color: inherit;
+    outline: none;
+    
+    &:hover, &:focus-visible {
+      color: $interactive-color;
+    }
+    
+    @supports not selector(:focus-visible) {
+      &:focus {
+        color: $interactive-color;
+      }
+    }
+    
+    &:active {
+      opacity: $button-down-opacity;
+    }
+  }
+  
+  &__services {
+    margin-right: 22px;
+  }
+}

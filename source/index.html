@@ -7,9 +7,127 @@
   <title>BikeCenter</title>
   <link rel="stylesheet" href="./css/style.min.css">
 </head>
-<body>
+<body class="page">
+<header class="page__header header">
+  <section class="page__sup-header sup-header">
+    <div class="container sup-header__container">
+      <button class="sup-header__location" type="button">Архангельск-на-под</button>
+      <button class="sup-header__address">ул. Дорожная, 1Е <span>и еще 3</span></button>
+      <ul class="sup-header__phones">
+        <li class="sup-header__phone">
+          <a class="sup-header__phone-link" href="tel:+78005000320">8 800 500-03-20</a>
+        </li>
+        <li class="sup-header__phone">
+          <a class="sup-header__phone-link" href="tel:+786105000320">8 861 200-03-20</a>
+        </li>
+      </ul>
+      <ul class="sup-header__services services">
+        <li class="services__item">
+          <a class="services__link services__link--repair button" href="#">Ремонт и обслуживание</a>
+        </li>
+        <li class="services__item">
+          <a class="services__link button" href="#">Прокат оборудования</a>
+        </li>
+      </ul>
+      <nav class="sup-header__sup-nav sup-nav">
+        <ul class="sup-nav__list">
+          <li class="sup-nav__item">
+            <a class="sup-nav__link" href="#">О нас</a>
+          </li>
+          <li class="sup-nav__item">
+            <a class="sup-nav__link" href="#">Доставка</a>
+          </li>
+          <li class="sup-nav__item">
+            <a class="sup-nav__link" href="#">Оплата</a>
+          </li>
+          <li class="sup-nav__item">
+            <a class="sup-nav__link" href="#">Вакансии</a>
+          </li>
+          <li class="sup-nav__item">
+            <a class="sup-nav__link" href="#">Помощь</a>
+          </li>
+          <li class="sup-nav__item">
+            <a class="sup-nav__link" href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </section>
+  <section class="container header__container">
+    <a class="header__logo" href="index.html">
+      <picture>
+        <img class="header__logo-image" src="images/logo-desktop.svg" alt="Логотип BikeCenter." width="195" height="40">
+      </picture>
+    </a>
+    <button class="header__catalog-button button" type="button">Каталог</button>
+    
+    <label class="header__search search">
+      <span class="visually-hidden">Поиск по сайту.</span>
+      <input class="search__input" type="search">
+      <button class="search__button button" type="button">
+        <span class="visually-hidden">Искать.</span>
+      </button>
+    </label>
+    <nav class="header__user-nav user-nav">
+      <a class="user-nav__user user" href="#">
+        <span class="user__avatar">
+          <span class="visually-hidden">Профиль пользователя.</span>
+        </span>
+        Вход
+      </a>
+      <ul class="user-nav__list">
+        <li class="user-nav__item">
+          <a class="user-nav__link user-nav__link--orders" href="#">Заказы</a>
+        </li>
+        <li class="user-nav__item">
+          <a class="user-nav__link user-nav__link--comparison" href="#">Сравнение</a>
+        </li>
+        <li class="user-nav__item">
+          <a class="user-nav__link user-nav__link--favorites" href="#">Избранное</a>
+        </li>
+        <li class="user-nav__item">
+          <a class="user-nav__link user-nav__link--cart" href="#">
+            <b>1</b>
+            <span class="user-nav__cart-text">Корзина</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </section>
+  <section class="container sub-header">
+    <nav class="sub-header__nav sub-nav">
+      <ul class="sub-nav__list">
+        <li class="sub-nav__item">
+          <a class="sub-nav__link" href="#">Горные велосипеды</a>
+        </li>
+        <li class="sub-nav__item">
+          <a class="sub-nav__link" href="#">Детские велосипеды</a>
+        </li>
+        <li class="sub-nav__item">
+          <a class="sub-nav__link" href="#">Детские самокаты</a>
+        </li>
+        <li class="sub-nav__item">
+          <a class="sub-nav__link" href="#">Электросамокаты</a>
+        </li>
+        <li class="sub-nav__item">
+          <a class="sub-nav__link" href="#">Сноуборды</a>
+        </li>
+        <li class="sub-nav__item">
+          <a class="sub-nav__link" href="#">Горные лыжи</a>
+        </li>
+      </ul>
+      <ul class="sub-nav__list sub-nav__list--right">
+        <li class="sub-nav__item">
+          <a class="sub-nav__link" href="#">Распродажа</a>
+        </li>
+        <li class="sub-nav__item">
+          <a class="sub-nav__link" href="#">Бренды</a>
+        </li>
+      </ul>
+    </nav>
+  </section>
 
-<h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, ut!</h1>
 
+</header>
 </body>
 </html>

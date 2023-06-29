@@ -1,3 +1,17 @@
 @use "fonts";
 @use "global";
-@use "components/test";
+
+// UI
+@use "components/ui/button";
+
+// Подключение компонентов
+@use "components/page";
+@use "components/sup-nav";
+@use "components/services";
+@use "components/sup-header";
+@use "components/header";
+@use "components/ui/search";
+@use "components/user-nav";
+@use "components/user";
+@use "components/sub-header";
+@use "components/sub-nav";

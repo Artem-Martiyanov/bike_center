@@ -1,0 +1,47 @@
+@use "../../variables" as *;
+@use "../../mixins" as *;
+
+.search {
+  display: flex;
+  
+  &__input {
+    font-family: inherit;
+    z-index: 1;
+    width: 100%;
+    min-width: 130px;
+    margin: 0;
+    padding: 10px 1em;
+    border: 1px solid $button-secondary-dark;
+    border-radius: 9px;
+    outline: none;
+    background-color: #f2f2f2;
+    
+    &:focus {
+      background-color: $main-light;
+    }
+  }
+  
+  &__button {
+    position: relative;
+    width: 100%;
+    min-width: 50px;
+    max-width: 90px;
+    margin-left: -10px;
+    border: none;
+    border-radius: 9px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    outline: none;
+    
+    &::after {
+      @include absolute-center-align;
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      content: "";
+      background-color: $primary-light-font;
+      mask: url("../images/icons/search-icon.svg") no-repeat center;
+    }
+    
+  }
+}

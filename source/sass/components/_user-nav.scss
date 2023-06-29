@@ -1,0 +1,85 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.user-nav {
+  display: flex;
+  align-items: flex-start;
+  column-gap: 25px;
+  
+  &__list {
+    @include list-reset;
+    display: flex;
+    gap: 16px;
+  }
+  
+  &__link {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    transition: color $transition-duration ease;
+    text-decoration: none;
+    color: inherit;
+    row-gap: 5px;
+    
+    &::before {
+      width: 100%;
+      height: 20px;
+      content: "";
+      transition: background-color $transition-duration ease;
+      background-color: $third-dark-font;
+    }
+    
+    &--orders::before {
+      mask: url("../images/icons/orders-icon.svg") no-repeat center;
+    }
+    
+    &--comparison::before {
+      mask: url("../images/icons/comparison-icon.svg") no-repeat center;
+    }
+    
+    &--favorites::before {
+      mask: url("../images/icons/favorites-icon.svg") no-repeat center;
+    }
+    
+    &--cart::before {
+      mask: url("../images/icons/cart-icon.svg") no-repeat center;
+    }
+    
+    b {
+      font-size: 13px;
+      font-weight: 600;
+      line-height: 1;
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 1px 6px;
+      transform: translateY(-35%);
+      text-transform: uppercase;
+      color: $primary-light-font;
+      border-radius: 10px;
+      background-color: $font-color-accent;
+    }
+    
+    &:hover, &:focus-visible {
+      color: $button-secondary-hovered;
+      
+      &::before {
+        background-color: $button-secondary-hovered;
+      }
+    }
+    
+    @supports not selector(:focus-visible) {
+      &:focus {
+        color: $button-secondary-hovered;
+        
+        &::before {
+          background-color: $button-secondary-hovered;
+        }
+      }
+    }
+    
+    &:active {
+      opacity: $button-down-opacity;
+    }
+  }
+}

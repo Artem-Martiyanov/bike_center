@@ -1,0 +1,56 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.user {
+  font-weight: 600;
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  padding: 10px 25px 10px 45px;
+  transition: background-color $transition-duration ease;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 20px;
+  outline: none;
+  background-color: #f2f2f2;
+  
+  &__avatar {
+    position: absolute;
+    left: 3px;
+    display: flex;
+    overflow: hidden;
+    @include absolute-vertical-align;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border: 1px solid $secondary-light-font;
+    border-radius: 50%;
+    background: url("../images/icons/profile-icon.svg") no-repeat center;
+    
+    & img {
+      width: 100%;
+      height: auto;
+      object-position: center;
+      object-fit: contain;
+    }
+    
+    &--authorized {
+      background: none;
+    }
+  }
+  
+  &:hover, &:focus-visible {
+    background-color: #c2c2c2;
+  }
+  
+  @supports not selector(:focus-visible) {
+    &:focus {
+      background-color: #c2c2c2;
+    }
+  }
+  
+  &:active {
+    opacity: $button-down-opacity;
+  }
+}

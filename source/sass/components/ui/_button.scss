@@ -1,0 +1,33 @@
+@use "../../variables" as *;
+
+.button {
+  display: inline-block;
+  margin: 0;
+  cursor: pointer;
+  transition: background-color $transition-duration ease;
+  text-decoration: none;
+  color: inherit;
+  border: none;
+  border-radius: $common-border-radius;
+  outline: none;
+  background-color: $button-secondary-dark;
+  
+  &:not(&--disabled):hover, &:not(&--disabled):focus-visible {
+    background-color: $button-secondary-hovered;
+  }
+  
+  @supports not selector(:focus-visible) {
+    &:not(&--disabled):focus {
+      background-color: $button-secondary-hovered;
+    }
+  }
+  
+  &:not(&--disabled):active {
+    opacity: $button-down-opacity;
+  }
+  
+  &:disabled, &--disabled {
+    cursor: default;
+    opacity: $button-disabled-opacity;
+  }
+}
