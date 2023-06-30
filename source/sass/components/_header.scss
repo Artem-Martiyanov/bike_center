@@ -119,6 +119,7 @@
   &__sub-header {
     @media (max-width: $tablet-width) {
       position: fixed;
+      z-index: 9;
       top: 0;
       left: 0;
       display: flex;

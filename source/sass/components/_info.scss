@@ -1,0 +1,129 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.info {
+  font-size: 16px;
+  color: $third-dark-font;
+  
+  &__card {
+    max-width: 1180px;
+    
+    &--guarantee {
+      display: none;
+      
+      @media (max-width: $mobile-width) {
+        display: block;
+        
+        .info__card-button {
+          position: relative;
+          width: 100%;
+          text-align: center;
+          
+          &::after {
+            @include absolute-vertical-align;
+            position: absolute;
+            right: 50px;
+            width: 20px;
+            height: 20px;
+            content: "";
+            background: $primary-light-font;
+            mask: url("../images/icons/arrow-icon.svg") no-repeat center;
+          }
+        }
+      }
+    }
+    
+    @media (max-width: $mobile-width) {
+      &--return-easy {
+        position: relative;
+        margin-top: 120px;
+        padding: 170px 16px 25px 16px;
+        border-radius: 20px;
+        
+        background: linear-gradient(90deg, #e2e6eb 0%, #f3f1f5 69.93%);
+        
+        &::before {
+          position: absolute;
+          top: -28px;
+          left: -12px;
+          width: 300px;
+          height: 200px;
+          content: "";
+          background: url("../images/return-easy.png") no-repeat center;
+        }
+        
+        .info__card-title {
+          position: absolute;
+          top: -120px;
+        }
+        
+        .info__card-list {
+          margin-bottom: 0;
+        }
+        
+        .info__card-text--desktop-only {
+          display: none;
+        }
+        
+        .info__card-text--mobile {
+          font-weight: 600;
+          line-height: 22px;
+          display: block;
+        }
+        
+      }
+    }
+  }
+  
+  &__card-title {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 24px;
+    margin: 1.5em 0 1em 0;
+    color: inherit;
+  }
+  
+  &__card-list {
+    margin: 1.5em 0 3em;
+    padding-left: 1.5em;
+  }
+  
+  &__card-item {
+    &::marker {
+      font-size: 12px;
+    }
+  }
+  
+  &__card-text {
+    margin: 1.5em 0;
+    
+    &--mobile {
+      display: none;
+    }
+  }
+  
+  &__card-link {
+    color: inherit;
+  }
+  
+  &__question {
+    @media (max-width: $mobile-width) {
+      display: none;
+    }
+  }
+  
+  &__question-title {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+  }
+  
+  &__question-text {
+    margin: 1.5em 0;
+    
+    a {
+      font-weight: 600;
+      color: inherit;
+    }
+  }
+}

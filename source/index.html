@@ -62,7 +62,7 @@
     </button>
     <a class="header__logo" href="index.html">
       <picture>
-        <source srcset="images/logo-mobile.svg" width="120" height="25" media="(max-width: 786px)">
+        <source srcset="images/logo-mobile.svg" width="120" height="25" media="(max-width: 768px)">
         <img class="header__logo-image" src="images/logo-desktop.svg" alt="Логотип BikeCenter." width="195" height="40">
       </picture>
     </a>
@@ -159,12 +159,28 @@
   </section>
   <section class="container features">
     <h2 class="visually-hidden">Наши преимущества.</h2>
-    <section class="features__card feature-card feature-card--help section">
+    <section class="features__card feature-card features__card--help feature-card--help section">
       <h3 class="feature-card__title">Мы всегда рады помочь</h3>
       <p class="feature-card__text">Если у вас есть нерешенный вопрос</p>
-      <a class="features__card button button--primary">Напишите нам в чат</a>
+      <a class="features__card__button button button--primary">Напишите нам в чат</a>
     </section>
-    <section class="features__card feature-card feature-card--payment section">
+    <section class="features__card feature-card features__card--delivery feature-card--delivery section">
+      <h3 class="feature-card__title">Доставка</h3>
+      <p class="feature-card__text">Стоимость доставки будет зависеть от города в котором вы находитесь</p>
+      <a class="features-card__button button button--primary">
+        <span class="feature-card__button-text-desktop">Расчитать доставку</span>
+        <span class="feature-card__button-text-mobile">Узнать подробнее</span>
+      </a>
+    </section>
+    <section class="features__card feature-card features__card--bonus feature-card--bonus section">
+      <h3 class="feature-card__title">Бонусная система</h3>
+      <ul class="feature-card__bonus-list">
+        <li class="feature-card__bonus-item">Покупай.</li>
+        <li class="feature-card__bonus-item">Управляй заказами.</li>
+        <li class="feature-card__bonus-item">Накапливай cashback—бонусы</li>
+      </ul>
+    </section>
+    <section class="features__card feature-card features__card--payment feature-card--payment section">
       <h3 class="feature-card__title">Оплата</h3>
       <ul class="feature-card__payment-list">
         <li class="feature-card__payment-item">
@@ -184,36 +200,133 @@
         </li>
       </ul>
     </section>
-    <div class="features__cards-container">
-      <section class="features__card feature-card feature-card--bonus section">
-        <h3 class="feature-card__title">Бонусная система</h3>
-        <ul class="feature-card__bonus-list">
-          <li class="feature-card__bonus-item">Покупай.</li>
-          <li class="feature-card__bonus-item">Управляй заказами.</li>
-          <li class="feature-card__bonus-item">Накапливай cashback—бонусы</li>
-        </ul>
-      </section>
-      <section class="features__card feature-card feature-card--guarantee section">
-        <div class="feature-card__wrapper">
-          <h3 class="feature-card__title">Гарантия</h3>
-          <p class="feature-card__text">Информацию по всем вопросам гарантии можно узнать тут.</p>
-        </div>
-        <a class="features__card__button button button--primary">Гарантийные талоны</a>
-      </section>
-    </div>
-    <section class="features__card feature-card feature-card--return-easy section">
+    <section class="features__card feature-card features__card--return-easy feature-card--return-easy section">
       <h3 class="feature-card__title">Легкий возврат</h3>
-      <p class="feature-card__text">Вернуть товары легко и удобно, если сохранён его товарный вид и потребительские свойства.</p>
+      <p class="feature-card__text">Вернуть товары легко и удобно, если сохранён его товарный вид и потребительские
+                                    свойства.</p>
       <a class="features__card__button button button--primary">Узнать подробнее</a>
     </section>
-    <section class="features__card feature-card feature-card--delivery section">
-      <h3 class="feature-card__title">Доставка</h3>
-      <p class="feature-card__text">Стоимость доставки будет зависеть от города в котором вы находитесь</p>
-      <a class="features__card__button button button--primary">Расчитать доставку</a>
+    <section class="features__card feature-card features__card--guarantee feature-card--guarantee section">
+      <div class="feature-card__wrapper">
+        <h3 class="feature-card__title">Гарантия</h3>
+        <p class="feature-card__text">Информацию по всем вопросам гарантии можно узнать тут.</p>
+      </div>
+      <a class="feature-card__button button button--primary">Гарантийные талоны</a>
     </section>
-  
-  
   </section>
+  
+  <section class="container info">
+    <section class="info__card info__card--order">
+      <h3 class="info__card-title">Как сделать заказ</h3>
+      <p class="info__card-text">
+        Мы делаем все возможное, чтобы максимально облегчить вам оформление заказа. Для того,
+        чтобы сделать это:
+      </p>
+      <ul class="info__card-list">
+        <li class="info__card-item">
+          Перейдите в раздел <a class="info__card-link" href="https://bike-centre.ru/katalog/">«Каталог»</a>;
+        </li>
+        <li class="info__card-item">
+          под понравившимся вам товаром нажать на зеленую кнопку «Купить»: это отправляет ваш заказ в виртуальную
+          корзину;
+        </li>
+        <li class="info__card-item">
+          переходите в корзину и оформляете заказ;
+        </li>
+        <li class="info__card-item">
+          система автоматически зарегистрирует&nbsp;вас;
+        </li>
+        <li class="info__card-item">
+          ожидайте смс и email уведомления о статусе вашего заказа. При возникновении вопросов будем рады помочь по
+          телефону 8(800)500-03-20.
+        </li>
+      </ul>
+    
+    
+    </section>
+    <section class="info__card info__card--return-easy">
+      <h3 class="info__card-title">Легкий возврат</h3>
+      <p class="info__card-text info__card-text--desktop-only">
+        Покупайте, пробуйте, вам понравится, если нет, мы вернем вам деньги! Без вопросов,
+        заявлений и дополнительных комиссий. Вы вправе передумать. Мы в «Байк Центре» понимаем
+        это, и с радостью сделаем вам обмен на понравившийся вам товар или вернём деньги.
+      </p>
+      <p class="info__card-text info__card-text--mobile">
+        Мы в «Байк Центре» понимаем это, и с радостью сделаем вам обмен на понравившийся вам товар или вернём деньги.
+      </p>
+      <ul class="info__card-list">
+        <li class="info__card-item">
+          Свяжитесь с нами по телефону или онлайн-чаты. Мы оформим вам бланк возврата и вышлем его вам на электронную
+          почту;
+        </li>
+        <li class="info__card-item">
+          распечатайте и заполните бланк, его нужно будет сдать вместе с заказом на указанном нами пункте выдачи;
+        </li>
+        <li class="info__card-item">
+          надёжно упакуйте товар в коробку, предотвращая трение изделий между собой и свободное перемещение товара
+          внутри упаковки;
+        </li>
+        <li class="info__card-item">
+          сдайте заказ в том же месте, где получали его или другом удобном вам партнёрском пункте выдачи заказов или
+          магазине;
+        </li>
+      </ul>
+      
+      <p class="info__card-text info__card-text--desktop-only">
+        Возврат и обмен товара производится на основании Закона РФ "О защите прав потребителей" и регулируется ст. 18,
+        19, 20, 21.
+      </p>
+      <p class="info__card-text info__card-text--desktop-only">
+        В случае доставки на дом и возникновения гарантийного случая/наличия брака у товара, мы самостоятельно и за свой
+        счёт заберём от вас данный товар.
+      </p>
+    
+    </section>
+    <section class="info__card info__card--guarantee">
+      <h3 class="info__card-title">Гарантия</h3>
+      <p class="info__card-text">
+        Информацию по всем вопросам, связанным с обменом, возвратом, ремонтом и взаимодействием с сервисным центром, вы
+        можете уточнить непосредственно у сотрудников магазина или по телефону горячей линии.
+      </p>
+      <a class="info__card-button button button--primary" href="#">Гарантийные талоны</a>
+    </section>
+    <section class="info__card info__card--feedback">
+      <h3 class="info__card-title">Обратная связь</h3>
+      <p class="info__card-text">
+        Если у вас есть предложения или замечания по работе интернет-магазина «Байк Центр», то вы всегда можете
+        обратиться к нам:
+      </p>
+      <ul class="info__card-list">
+        <li class="info__card-item">
+          в социальной сети <a class="info__card-link" href="https://vk.com/bikecentre">ВКонтакте</a>;
+        </li>
+        <li class="info__card-item">
+          по электронной почте руководителю интернет-магазина
+          <a class="info__card-link" href="mailto:info@bike-centre.ru">info@bike-centre.ru</a>;
+        </li>
+        <li class="info__card-item">
+          написав <a class="info__card-link" href="https://market.yandex.ru/shop--baik-tsentr/134996/reviews">отзыв</a>
+          о работе «Байк Центра».
+        </li>
+      </ul>
+    
+    </section>
+    <div class="info__question">
+      <b class="info__question-title">Не нашли то что нужно?</b>
+      <p class="info__question-text">
+        Позвоните нам по номеру
+        <a href="tel:+78000000000">8 (800) 000000000</a>
+      </p>
+    </div>
+  </section>
+
+
 </main>
+
+<footer>
+</footer>
+
+<!--Удалить-->
+<div style="height: 100vh"></div>
 </body>
 </html>

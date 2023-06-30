@@ -5,13 +5,17 @@
   box-sizing: border-box;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   @include open-sans;
   font-size: 16px;
   line-height: 1.5;
+  min-width: 320px;
   margin: 0;
   color: $third-dark-font;
-  min-width: 320px;
 }
 
 .container {

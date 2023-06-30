@@ -2,35 +2,73 @@
 @use "../variables" as *;
 
 .page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  
   &__main {
+    flex: 1;
     padding-top: 20px;
   }
   
   &__heading {
     margin-bottom: 70px;
+    
+    @media (max-width: $tablet-width) {
+      margin-bottom: 18px;
+    }
   }
   
   &__breadcrumbs {
     margin-bottom: 26px;
+    
+    @media (max-width: $mobile-550-width) {
+      display: none;
+    }
   }
   
   &__title-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
+    @media (max-width: $mobile-550-width) {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 26px;
+    }
+  }
+  
+  &__title {
+    @media (max-width: $mobile-550-width) {
+      color: #333333;
+    }
   }
   
   &__hot-line {
     display: flex;
     align-items: baseline;
-    margin: 0;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    margin: 0 0 0 30px;
     color: $main-dark;
     column-gap: 40px;
+    
+    @media (max-width: $mobile-550-width) {
+      justify-content: flex-start;
+      margin-left: 0;
+    }
   }
   
   &__hot-line-text {
     font-size: 14px;
     letter-spacing: 0.14px;
+    
+    @media (max-width: $mobile-550-width) {
+      font-size: 16px;
+      letter-spacing: 0.16px;
+      color: $third-dark-font;
+    }
   }
   
   &__hot-line-number {
@@ -39,10 +77,10 @@
     a {
       font-size: 24px;
       font-weight: 600;
+      transition: color $transition-duration ease;
       text-decoration: none;
       letter-spacing: 0.24px;
       color: $third-dark-font;
-      transition: color $transition-duration ease;
       
       &:hover, &:focus-visible {
         color: $font-color-accent;
@@ -57,6 +95,15 @@
       &:active {
         opacity: $button-down-opacity;
       }
+      
+      @media (max-width: $mobile-550-width) {
+        @include montserrat;
+        line-height: 38px;
+      }
     }
+  }
+  
+  &--locked {
+    overflow: hidden;
   }
 }

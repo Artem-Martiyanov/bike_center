@@ -11,13 +11,13 @@ $burger-hover-color: $interactive-color;
   z-index: 10;
   width: $burger-width;
   height: $burger-height;
-  padding: 0;
   margin: 0;
+  padding: 0;
   cursor: pointer;
   transition: opacity $transition-duration ease;
   border: none;
-  background: none;
   outline: none;
+  background: none;
   
   &::before,
   &::after {
@@ -45,9 +45,13 @@ $burger-hover-color: $interactive-color;
     width: 100%;
     height: $burger-elem-thickness;
     transition: opacity $burger-transition ease, background-color $transition-duration ease, transform 0.3s ease;
+    pointer-events: none;
     border-radius: 3px;
     background-color: $main-light;
-    pointer-events: none;
+  }
+  
+  &--active {
+    position: fixed;
   }
   
   &--active .burger__item {
