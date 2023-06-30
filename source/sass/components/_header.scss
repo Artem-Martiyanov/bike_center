@@ -3,15 +3,31 @@
 
 .header {
   font-size: 12px;
+  padding-bottom: 3px;
   border-bottom: 1px solid #f2f2f2;
   
   &__container {
     display: flex;
     align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+    @media (max-width: $tablet-width) {
+      background-color: $main-dark;
+    }
+  }
+  
+  &__burger {
+    display: none;
+    
+    @media (max-width: $tablet-width) {
+      display: block;
+    }
   }
   
   &__logo {
     display: inline-block;
+    min-width: 170px;
     margin-right: 24px;
     transition: opacity $transition-duration ease;
     outline: none;
@@ -24,6 +40,22 @@
       transition: opacity 0s ease;
       opacity: $button-down-opacity;
     }
+    
+    @media (max-width: $tablet-width) {
+      display: flex;
+      min-width: 120px;
+      margin-left: 60px;
+      
+      img {
+        display: inline-block;
+        margin-bottom: -5px;
+      }
+    }
+  }
+  
+  &__logo-image {
+    width: 100%;
+    height: auto;
   }
   
   &__catalog-button {
@@ -31,7 +63,7 @@
     font-weight: 700;
     position: relative;
     margin-right: 17px;
-    padding: 10px 30px 11px 52px;
+    padding: 12px 30px 12px 52px;
     color: $primary-light-font;
     border-radius: 10px;
     
@@ -47,11 +79,15 @@
     }
     
     &::before {
-      top: 14px;
+      top: 16px;
     }
     
     &::after {
-      bottom: 14px;
+      bottom: 15px;
+    }
+    
+    @media (max-width: $tablet-width) {
+      display: none;
     }
   }
   
@@ -59,9 +95,45 @@
     width: 100%;
     max-width: 643px;
     margin-right: auto;
+    
+    @media (max-width: $tablet-width) {
+      justify-content: flex-end;
+    }
   }
   
   &__user-nav {
     margin-left: 20px;
+    
+    @media (max-width: $tablet-width) {
+      margin: 0;
+    }
   }
+  
+  &__sup-header, &__sub-header {
+    @media (max-width: $tablet-width) {
+      display: none;
+    }
+  }
+  
+  &__sub-header {
+    transition: transform 0.5s ease;
+    transform: translateX(-100vw);
+    
+    @media (max-width: $tablet-width) {
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: flex;
+      min-height: 100vh;
+      padding-top: 50px;
+      padding-bottom: 20vh;
+      background-color: rgba($main-dark, 0.9);
+    }
+    
+    &--active {
+      display: flex;
+      transform: translateX(0);
+    }
+  }
+  
 }

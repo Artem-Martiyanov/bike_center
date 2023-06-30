@@ -8,12 +8,11 @@
   padding: 5px 0;
   color: $primary-light-font;
   background-color: $main-dark;
-  margin-bottom: 10px;
   
   &__container {
     display: flex;
     align-items: center;
-  
+    
     @media (max-width: $desktop-1000-width) {
       flex-wrap: wrap;
       justify-content: space-between;
@@ -23,9 +22,9 @@
   
   &__location {
     position: relative;
+    min-width: 150px;
     margin: 0 100px 0 0;
     padding: 5px 5px 5px 21px;
-    min-width: 150px;
     cursor: pointer;
     transition: color $transition-duration ease;
     color: $secondary-light-font;
@@ -74,6 +73,7 @@
   }
   
   &__address {
+    min-width: 172px;
     margin: 0 35px 0 0;
     cursor: pointer;
     transition: color $transition-duration ease;
@@ -82,7 +82,6 @@
     border: none;
     outline: none;
     background: none;
-    min-width: 172px;
     
     &:hover, &:focus-visible {
       color: $interactive-color;
@@ -110,11 +109,11 @@
     @media (max-width: $desktop-1550-width) {
       flex-direction: column;
     }
-  
+    
     @media (max-width: $desktop-1000-width) {
       flex-direction: row;
-      margin-left: auto;
       margin-right: 0;
+      margin-left: auto;
     }
   }
   
@@ -142,7 +141,7 @@
         }
       }
     }
-  
+    
     @media (max-width: $desktop-1000-width) {
       &:last-child {
         margin-right: 0;
@@ -157,8 +156,8 @@
   }
   
   &__phone-link {
-    min-width: 105px;
     display: inline-block;
+    min-width: 105px;
     padding: 3px 0;
     transition: color $transition-duration ease;
     text-decoration: none;
@@ -182,5 +181,9 @@
   
   &__services {
     margin-right: 22px;
+    
+    @media (max-width: $tablet-820-width) {
+      display: none;
+    }
   }
 }

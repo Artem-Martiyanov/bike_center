@@ -6,10 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>BikeCenter</title>
   <link rel="stylesheet" href="./css/style.min.css">
+  <script src="js/index.min.js" defer></script>
 </head>
 <body class="page">
 <header class="page__header header">
-  <section class="page__sup-header sup-header">
+  <section class="header__sup-header sup-header">
     <div class="container sup-header__container">
       <button class="sup-header__location" type="button">Архангельск-на-под</button>
       <button class="sup-header__address">ул. Дорожная, 1Е <span>и еще 3</span></button>
@@ -54,13 +55,18 @@
     </div>
   </section>
   <section class="container header__container">
+    <button class="header__burger burger" data-type="burger">
+      <span class="burger__item">
+        <span class="visually-hidden">Открыть/Закрыть меню.</span>
+      </span>
+    </button>
     <a class="header__logo" href="index.html">
       <picture>
+        <source srcset="images/logo-mobile.svg" width="120" height="25" media="(max-width: 786px)">
         <img class="header__logo-image" src="images/logo-desktop.svg" alt="Логотип BikeCenter." width="195" height="40">
       </picture>
     </a>
     <button class="header__catalog-button button" type="button">Каталог</button>
-    
     <label class="header__search search">
       <span class="visually-hidden">Поиск по сайту.</span>
       <input class="search__input" type="search">
@@ -76,13 +82,13 @@
         Вход
       </a>
       <ul class="user-nav__list">
-        <li class="user-nav__item">
+        <li class="user-nav__item user-nav__item--no-tablet">
           <a class="user-nav__link user-nav__link--orders" href="#">Заказы</a>
         </li>
-        <li class="user-nav__item">
+        <li class="user-nav__item user-nav__item--no-tablet">
           <a class="user-nav__link user-nav__link--comparison" href="#">Сравнение</a>
         </li>
-        <li class="user-nav__item">
+        <li class="user-nav__item user-nav__item--no-tablet">
           <a class="user-nav__link user-nav__link--favorites" href="#">Избранное</a>
         </li>
         <li class="user-nav__item">
@@ -94,7 +100,7 @@
       </ul>
     </nav>
   </section>
-  <section class="container sub-header">
+  <section class="header__sub-header container sub-header">
     <nav class="sub-header__nav sub-nav">
       <ul class="sub-nav__list">
         <li class="sub-nav__item">
@@ -118,16 +124,14 @@
       </ul>
       <ul class="sub-nav__list sub-nav__list--right">
         <li class="sub-nav__item">
-          <a class="sub-nav__link" href="#">Распродажа</a>
+          <a class="sub-nav__link sub-nav__link--right sub-nav__link--accent" href="#">Распродажа</a>
         </li>
         <li class="sub-nav__item">
-          <a class="sub-nav__link" href="#">Бренды</a>
+          <a class="sub-nav__link sub-nav__link--right" href="#">Бренды</a>
         </li>
       </ul>
     </nav>
   </section>
-
-
 </header>
 </body>
 </html>

@@ -41,7 +41,32 @@
       content: "";
       background-color: $primary-light-font;
       mask: url("../images/icons/search-icon.svg") no-repeat center;
+      transition: background-color $transition-duration ease;
+    }
+    
+  }
+  
+  @media (max-width: $tablet-width) {
+    &__input {
+      display: none;
+    }
+    
+    &__button {
+      background: transparent;
+      width: 30px;
+      height: 30px;
+      margin: 0;
+    }
+    
+    &__button:not(&--disabled):hover {
+      background: transparent;
+      
+      &::after {
+        background-color: $button-secondary-hovered;
+      }
     }
     
   }
 }
+
+

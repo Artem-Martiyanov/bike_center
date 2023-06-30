@@ -8,13 +8,82 @@
   &__list {
     @include list-reset;
     display: flex;
+    flex-wrap: wrap;
+    column-gap: 26px;
+    
+    &:not(&--right) {
+      margin-right: 30px;
+    }
+    
+    &--right {
+      justify-content: flex-end;
+    }
+    
+    @media (max-width: $tablet-width) {
+      flex-direction: column;
+    }
+  }
+  
+  &__item {
+    overflow: hidden;
   }
   
   &__link {
+    font-weight: 600;
+    position: relative;
+    display: inline-block;
+    padding: 5px 0;
     text-decoration: none;
     text-transform: uppercase;
     color: inherit;
-    font-weight: 600;
-    padding: 8px 0;
+    
+    &::after {
+      position: absolute;
+      bottom: 5px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      content: "";
+      transition: transform $transition-duration ease;
+      transform: scaleX(0);
+      background-color: $third-dark-font;
+    }
+    
+    &--right {
+      font-weight: 700;
+    }
+    
+    &--accent {
+      color: $font-color-accent;
+      
+      &::after {
+        background-color: $font-color-accent;
+      }
+    }
+    
+    &:hover, &:focus-visible {
+      &::after {
+        transform: scaleX(1);
+      }
+    }
+    
+    &:active {
+      opacity: $button-down-opacity;
+    }
+    
+    @media (max-width: $tablet-width) {
+      &:not(&--accent) {
+        color: $primary-light-font;
+        
+        &::after {
+          background-color: $primary-light-font;
+        }
+      }
+    }
+  }
+  
+  @media (max-width: $tablet-width) {
+    flex-direction: column;
   }
 }
+

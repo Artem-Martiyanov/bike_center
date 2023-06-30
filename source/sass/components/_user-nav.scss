@@ -6,10 +6,24 @@
   align-items: flex-start;
   column-gap: 25px;
   
+  &__user {
+    @media (max-width: $tablet-width) {
+      display: none;
+    }
+  }
+  
   &__list {
     @include list-reset;
     display: flex;
     gap: 16px;
+  }
+  
+  &__item {
+    &--no-tablet {
+      @media (max-width: $desktop-1000-width) {
+        display: none;
+      }
+    }
   }
   
   &__link {
@@ -41,8 +55,23 @@
       mask: url("../images/icons/favorites-icon.svg") no-repeat center;
     }
     
-    &--cart::before {
-      mask: url("../images/icons/cart-icon.svg") no-repeat center;
+    &--cart {
+      &::before {
+        mask: url("../images/icons/cart-icon.svg") no-repeat center;
+      }
+      
+      @media (max-width: $tablet-width) {
+        width: 40px;
+        padding: 5px;
+        
+        &::before {
+          background-color: $primary-light-font;
+        }
+        
+        span {
+          display: none;
+        }
+      }
     }
     
     b {
