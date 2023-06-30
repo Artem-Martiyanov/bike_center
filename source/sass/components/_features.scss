@@ -1,0 +1,15 @@
+@use "../mixins" as *;
+@use "../variables" as *;
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(320px, 432px)) 1fr;
+  column-gap: 16px;
+  row-gap: 30px;
+  
+  &__cards-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+  }
+}

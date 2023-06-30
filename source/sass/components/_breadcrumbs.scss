@@ -1,0 +1,53 @@
+@use "../mixins" as *;
+@use "../variables" as *;
+
+.breadcrumbs {
+  @include list-reset;
+  display: flex;
+  flex-wrap: wrap;
+  
+  &__item {
+    position: relative;
+    
+    &:not(:last-child) {
+      padding-right: 15px;
+      
+      &::after {
+        position: absolute;
+        right: 3px;
+        display: inline-block;
+        content: "/";
+      }
+      
+      .breadcrumbs__link {
+        &:hover, &:focus-visible {
+          text-decoration: underline;
+        }
+        
+        @supports not selector(:focus-visible) {
+          &:focus {
+            text-decoration: underline;
+          }
+        }
+        
+        &:active {
+          opacity: $button-down-opacity;
+        }
+      }
+    }
+    
+    &:last-child {
+      .breadcrumbs__link {
+        color: #bdbdbd;
+      }
+    }
+    
+  }
+  
+  &__link {
+    font-size: 12px;
+    padding: 5px 3px;
+    text-decoration: none;
+    color: inherit;
+  }
+}

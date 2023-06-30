@@ -1,0 +1,11 @@
+@use "../mixins" as *;
+@use "../variables" as *;
+
+.section {
+  &__title {
+    margin: 0;
+    font-size: 26px;
+    font-weight: 600;
+    color: $primary-dark-font;
+  }
+}

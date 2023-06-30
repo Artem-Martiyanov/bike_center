@@ -39,23 +39,33 @@
       width: 20px;
       height: 20px;
       content: "";
+      transition: background-color $transition-duration ease;
       background-color: $primary-light-font;
       mask: url("../images/icons/search-icon.svg") no-repeat center;
-      transition: background-color $transition-duration ease;
     }
     
   }
   
   @media (max-width: $tablet-width) {
+    position: relative;
+    
     &__input {
-      display: none;
+      position: absolute;
+      top: 50%;
+      right: 50px;
+      max-width: 200px;
+      transition: transform 0.3s ease;
+      transform: translateY(-50%) scaleX(0);
+      transform-origin: 100% 50%;
+      opacity: 0;
     }
     
     &__button {
-      background: transparent;
+      position: relative;
       width: 30px;
       height: 30px;
       margin: 0;
+      background: transparent;
     }
     
     &__button:not(&--disabled):hover {
@@ -66,6 +76,16 @@
       }
     }
     
+    &__button:not(&--disabled):active {
+      opacity: 1;
+    }
+    
+    &--shown {
+      .search__input {
+        opacity: 1;
+        transform: translateY(-50%) scaleX(1);
+      }
+    }
   }
 }
 

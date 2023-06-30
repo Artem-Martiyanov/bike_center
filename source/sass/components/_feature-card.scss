@@ -1,0 +1,325 @@
+@use "../mixins" as *;
+@use "../variables" as *;
+
+.feature-card {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  min-height: 326px;
+  padding: 25px 45px;
+  border-radius: 20px;
+  background: linear-gradient(90deg, #e2e6eb 0%, #f3f1f5 69.93%);
+  
+  &__title {
+    font-size: 24px;
+    margin: 0 0 auto;
+    letter-spacing: 0.24px;
+    color: inherit;
+  }
+  
+  &__text {
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.14px;
+    color: $primary-dark-font;
+  }
+  
+  &__payment-list {
+    @include list-reset;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+  }
+  
+  &__payment-link {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
+    padding: 0 5px;
+    transition: color $transition-duration ease;
+    letter-spacing: 0.14px;
+    color: $third-dark-font;
+    
+    &:hover, &:focus-visible {
+      color: $font-color-accent;
+    }
+    
+    @supports not selector(:focus-visible) {
+      &:focus {
+        color: $font-color-accent;
+      }
+    }
+    
+    &:active {
+      opacity: $button-down-opacity;
+    }
+  }
+  
+  &--help {
+    position: relative;
+    padding-top: 167px;
+    
+    &::before {
+      position: absolute;
+      top: -38px;
+      left: 50%;
+      width: 264px;
+      height: 210px;
+      content: "";
+      transition: transform $transition-duration ease;
+      transform: translateX(-50%);
+      
+      background-image: url("../images/help.png");
+      background-image: image-set(
+          url("../images/help.webp") 1x,
+          url("../images/help.png") 1x,
+      );
+      
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    
+    &:hover {
+      &::before {
+        transform: translateX(-50%) translateY(-2%);;
+      }
+    }
+  }
+  
+  &--payment {
+    position: relative;
+    padding-top: 33px;
+    
+    .feature-card__title {
+      font-size: 26px;
+      letter-spacing: 0.26px;
+    }
+    
+    &::before {
+      position: absolute;
+      top: -38px;
+      right: 6px;
+      width: 206px;
+      height: 207px;
+      content: "";
+      transition: transform $transition-duration ease;
+      
+      background-image: url("../images/payment.png");
+      background-image: image-set(
+          url("../images/payment.webp") 1x,
+          url("../images/payment.png") 1x,
+      );
+      
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    
+    &:hover {
+      &::before {
+        transform: translateY(-2%);
+      }
+    }
+  }
+  
+  &--bonus {
+    position: relative;
+    min-height: auto;
+    padding-top: 33px;
+    padding-right: 300px;
+    color: $primary-light-font;
+    background: $main-accent;
+    
+    .feature-card__title {
+      font-size: 26px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      letter-spacing: 0.26px;
+    }
+    
+    .feature-card__bonus-list {
+      font-size: 14px;
+      font-weight: 600;
+      margin: 0;
+      padding: 0 0 0 20px;
+    }
+    
+    .feature-card__bonus-item::marker {
+      font-size: 12.5px;
+    }
+    
+    &::before {
+      position: absolute;
+      top: 9px;
+      right: 70px;
+      width: 189px;
+      height: 149px;
+      content: "";
+      transition: transform $transition-duration ease;
+      
+      background-image: url("../images/bonus-main.png");
+      background-image: image-set(
+          url("../images/bonus-main.webp") 1x,
+          url("../images/bonus-main.png") 1x,
+      );
+      
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    
+    &::after {
+      position: absolute;
+      top: -18px;
+      right: 14px;
+      width: 330px;
+      height: 216px;
+      content: "";
+      transition: transform 0.3s ease;
+      
+      background-image: url("../images/bonus-coins.png");
+      background-image: image-set(
+          url("../images/bonus-coins.webp") 1x,
+          url("../images/bonus-coins.png") 1x,
+      );
+      
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    
+    &:hover {
+      &::before {
+        transform: scale(0.99);
+      }
+      
+      &::after {
+        transform: scale(1.1);
+      }
+    }
+  }
+  
+  &--guarantee {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    min-height: auto;
+    
+    .feature-card__title {
+      font-size: 26px;
+      font-weight: 700;
+      margin-bottom: 3px;
+      letter-spacing: 0.26px;
+    }
+    
+    .feature-card__text {
+      max-width: 340px;
+      margin: 0 30px 0;
+    }
+    
+    .features__card__button {
+      position: relative;
+      padding-right: 76px;
+      
+      &::after {
+        @include absolute-vertical-align;
+        position: absolute;
+        right: 36px;
+        width: 16px;
+        height: 16px;
+        content: "";
+        background-color: $primary-light-font;
+        mask: url("../images/icons/arrow-icon.svg") no-repeat center;
+      }
+    }
+    
+  }
+  
+  &--return-easy {
+    position: relative;
+    min-height: auto;
+    grid-column: 1/3;
+    grid-row: 2;
+    
+    .feature-card__title {
+      font-size: 26px;
+      font-weight: 700;
+      line-height: 38px;
+      margin-bottom: 12px;
+      letter-spacing: 0.26px;
+    }
+    
+    .feature-card__text {
+      max-width: 400px;
+      margin: 0 30px 24px 0;
+    }
+    
+    &::before {
+      position: absolute;
+      top: -14px;
+      right: 76px;
+      width: 297px;
+      height: 195px;
+      content: "";
+      transition: transform $transition-duration ease;
+      
+      background-image: url("../images/return-easy.png");
+      background-image: image-set(
+          url("../images/return-easy.webp") 1x,
+          url("../images/return-easy.png") 1x,
+      );
+      
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    
+    &:hover {
+      &::before {
+        transform: translateY(-2%);;
+      }
+    }
+    
+  }
+  
+  &--delivery {
+    position: relative;
+    min-height: auto;
+    
+    .feature-card__title {
+      font-size: 26px;
+      line-height: 38px;
+      margin-bottom: 12px;
+      letter-spacing: 0.26px;
+    }
+    
+    .feature-card__text {
+      max-width: 305px;
+      margin: 0 30px 24px 0;
+    }
+    
+    &::before {
+      position: absolute;
+      top: -14px;
+      right: 42px;
+      width: 329px;
+      height: 180px;
+      content: "";
+      transition: transform 0.3s ease;
+      
+      background-image: url("../images/delivery.png");
+      background-image: image-set(
+          url("../images/delivery.webp") 1x,
+          url("../images/delivery.png") 1x,
+      );
+      
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    
+    &:hover {
+      &::before {
+        transform: translateX(-4%);;
+      }
+    }
+    
+  }
+}

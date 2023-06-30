@@ -5,6 +5,7 @@
   font-size: 12px;
   padding-bottom: 3px;
   border-bottom: 1px solid #f2f2f2;
+  box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.05);
   
   &__container {
     display: flex;
@@ -79,11 +80,11 @@
     }
     
     &::before {
-      top: 16px;
+      top: 18px;
     }
     
     &::after {
-      bottom: 15px;
+      bottom: 16px;
     }
     
     @media (max-width: $tablet-width) {
@@ -116,9 +117,6 @@
   }
   
   &__sub-header {
-    transition: transform 0.5s ease;
-    transform: translateX(-100vw);
-    
     @media (max-width: $tablet-width) {
       position: fixed;
       top: 0;
@@ -127,13 +125,16 @@
       min-height: 100vh;
       padding-top: 50px;
       padding-bottom: 20vh;
+      transition: transform 0.5s ease, opacity 0.5s ease;
+      transform: translateX(-100vw);
+      opacity: 0;
       background-color: rgba($main-dark, 0.9);
     }
     
     &--active {
       display: flex;
       transform: translateX(0);
+      opacity: 1;
     }
   }
-  
 }

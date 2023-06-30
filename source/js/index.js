@@ -10,5 +10,10 @@ document.addEventListener('pointerdown', (evt) => {
     subHeader.classList.toggle('header__sub-header--active')
   }
   
+  if (dataset.type === 'search') {
+    const searchButton = evt.target
+    searchButton.closest('.search').classList.toggle('search--shown')
+  }
+  
 })
 

@@ -7,7 +7,6 @@
 @use "components/ui/burger";
 
 // Подключение компонентов
-@use "components/page";
 @use "components/sup-nav";
 @use "components/services";
 @use "components/sup-header";
@@ -16,3 +15,8 @@
 @use "components/user-nav";
 @use "components/sub-header";
 @use "components/sub-nav";
+@use "components/breadcrumbs";
+@use "components/section";
+@use "components/features";
+@use "components/feature-card";
+@use "components/page";

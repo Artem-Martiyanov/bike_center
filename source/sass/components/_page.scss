@@ -1,0 +1,62 @@
+@use "../mixins" as *;
+@use "../variables" as *;
+
+.page {
+  &__main {
+    padding-top: 20px;
+  }
+  
+  &__heading {
+    margin-bottom: 70px;
+  }
+  
+  &__breadcrumbs {
+    margin-bottom: 26px;
+  }
+  
+  &__title-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  &__hot-line {
+    display: flex;
+    align-items: baseline;
+    margin: 0;
+    color: $main-dark;
+    column-gap: 40px;
+  }
+  
+  &__hot-line-text {
+    font-size: 14px;
+    letter-spacing: 0.14px;
+  }
+  
+  &__hot-line-number {
+    margin: 0;
+    
+    a {
+      font-size: 24px;
+      font-weight: 600;
+      text-decoration: none;
+      letter-spacing: 0.24px;
+      color: $third-dark-font;
+      transition: color $transition-duration ease;
+      
+      &:hover, &:focus-visible {
+        color: $font-color-accent;
+      }
+      
+      @supports not selector(:focus-visible) {
+        &:focus {
+          color: $font-color-accent;
+        }
+      }
+      
+      &:active {
+        opacity: $button-down-opacity;
+      }
+    }
+  }
+}
