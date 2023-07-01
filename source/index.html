@@ -1,9 +1,10 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Страница помощь BikeCenter.">
   <title>BikeCenter</title>
   <link rel="stylesheet" href="./css/style.min.css">
   <script src="js/index.min.js" defer></script>
@@ -67,13 +68,13 @@
       </picture>
     </a>
     <button class="header__catalog-button button" type="button">Каталог</button>
-    <label class="header__search search">
-      <span class="visually-hidden">Поиск по сайту.</span>
-      <input class="search__input" type="search">
+    <div class="header__search search">
+      <label class="visually-hidden" for="site-search">Поиск по сайту.</label>
+      <input class="search__input" type="search" id="site-search">
       <button class="search__button button" type="button" data-type="search">
         <span class="visually-hidden">Искать.</span>
       </button>
-    </label>
+    </div>
     <nav class="header__user-nav user-nav">
       <a class="user-nav__user user" href="#">
         <span class="user__avatar">
@@ -167,7 +168,7 @@
     <section class="features__card feature-card features__card--delivery feature-card--delivery section">
       <h3 class="feature-card__title">Доставка</h3>
       <p class="feature-card__text">Стоимость доставки будет зависеть от города в котором вы находитесь</p>
-      <a class="features-card__button button button--primary">
+      <a class="feature-card__button button button--primary">
         <span class="feature-card__button-text-desktop">Расчитать доставку</span>
         <span class="feature-card__button-text-mobile">Узнать подробнее</span>
       </a>
@@ -214,7 +215,6 @@
       <a class="feature-card__button button button--primary">Гарантийные талоны</a>
     </section>
   </section>
-  
   <section class="container info">
     <section class="info__card info__card--order">
       <h3 class="info__card-title">Как сделать заказ</h3>
@@ -288,7 +288,7 @@
         Информацию по всем вопросам, связанным с обменом, возвратом, ремонтом и взаимодействием с сервисным центром, вы
         можете уточнить непосредственно у сотрудников магазина или по телефону горячей линии.
       </p>
-      <a class="info__card-button button button--primary" href="#">Гарантийные талоны</a>
+      <a class="info__card-button button button--primary" href="#"><span>Гарантийные талоны</span></a>
     </section>
     <section class="info__card info__card--feedback">
       <h3 class="info__card-title">Обратная связь</h3>
@@ -319,14 +319,198 @@
       </p>
     </div>
   </section>
-
-
 </main>
-
-<footer>
+<footer class="page__footer footer">
+  <div class="container footer__container">
+    <section class="footer__section footer-section footer-section--help footer__section--help ">
+      <h2 class="footer-section__title">Помощь</h2>
+      <ul class="footer-section__list">
+        <li class="footer-section__item">
+          <a class="footer-section__link footer-section__link--mobile-arrowed footer-section__link--payment" href="#">
+            <span class="footer-section__link-mobile-only">Оплата</span>
+            <span class="footer-section__link-desktop-only">Как оплатить?</span>
+          </a>
+        </li>
+        <li class="footer-section__item">
+          <a class="footer-section__link footer-section__link--mobile-arrowed footer-section__link--delivery" href="#">
+            <span class="footer-section__link-mobile-only">Условия доставки</span>
+            <span class="footer-section__link-desktop-only">Как получить?</span>
+          </a>
+        </li>
+        <li class="footer-section__item footer-section__item--desktop-only">
+          <a class="footer-section__link" href="#">Пользовательское соглашение</a>
+        </li>
+        <li class="footer-section__item footer-section__item--desktop-only">
+          <a class="footer-section__link" href="#">Бонусная программа</a>
+        </li>
+        <li class="footer-section__item footer-section__item--mobile-only">
+          <a class="footer-section__link footer-section__link--mobile-arrowed footer-section__link--contacts" href="#">
+            Контакты
+          </a>
+        </li>
+        <li class="footer-section__item footer-section__item--mobile-only">
+          <a class="footer-section__link footer-section__link--mobile-arrowed footer-section__link--review" href="#">
+            Оставить отзыв
+          </a>
+        </li>
+      </ul>
+    </section>
+    <section class="footer__section footer-section footer-section--about footer__section--about">
+      <h2 class="footer-section__title">О нас</h2>
+      <ul class="footer-section__list">
+        <li class="footer-section__item">
+          <a class="footer-section__link footer-section__link--mobile-arrowed" href="#">Ремонт и обcлуживание</a>
+        </li>
+        <li class="footer-section__item">
+          <a class="footer-section__link footer-section__link--mobile-arrowed" href="#">Прокат оборудования</a>
+        </li>
+        <li class="footer-section__item">
+          <a class="footer-section__link footer-section__link--mobile-arrowed" href="#">
+            <span class="footer-section__link-mobile-only">О нас</span>
+            <span class="footer-section__link-desktop-only">Наша история</span>
+          </a>
+        </li>
+        <li class="footer-section__item footer-section__item--desktop-only">
+          <a class="footer-section__link" href="#">Мероприятия от Байк Центра</a>
+        </li>
+        <li class="footer-section__item footer-section__item--move-end">
+          <a class="footer-section__link footer-section__link--mobile-arrowed" href="#">Арендодателям</a>
+        </li>
+        <li class="footer-section__item">
+          <a class="footer-section__link footer-section__link--mobile-arrowed" href="#">Вакансии</a>
+        </li>
+        <li class="footer-section__item footer-section__item--desktop-only">
+          <a class="footer-section__link" href="#">Контакты</a>
+        </li>
+        <li class="footer-section__item footer-section__item--mobile-only">
+          <a class="footer-section__link footer-section__link--mobile-arrowed" href="#">Пользовательское соглашение</a>
+        </li>
+        <li class="footer-section__item footer-section__item--mobile-only">
+          <a class="footer-section__link footer-section__link--mobile-arrowed" href="#">Бонусная программа</a>
+        </li>
+      </ul>
+    </section>
+    <section class="footer__section footer-section footer-section--contacts footer__section--contacts">
+      <h2 class="footer-section__title">Контакты</h2>
+      <ul class="footer-section__list footer-section__list--phones">
+        <li class="footer-section__item">
+          <a class="footer-section__link footer-section__link--button-style" href="tel:+78005000320">
+           <span class="footer-section__link-mobile-only">Позвонить</span> 8 (800) 500-03-20
+          </a>
+        </li>
+        <li class="footer-section__item footer-section__item--desktop-only">
+          <a class="footer-section__link" href="tel:+78612025840">8 (861) 202-58-40</a>
+        </li>
+      </ul>
+      <ul class="footer-section__list footer-section__list--social">
+        <li class="footer-section__item">
+          <a class="footer-section__link footer-section__link--whatsapp footer-section__link--mobile-arrowed" href="#"><span>Написать в</span>
+            WhatsApp</a>
+        </li>
+        <li class="footer-section__item">
+          <a class="footer-section__link footer-section__link--telegram footer-section__link--mobile-arrowed" href="#"><span>Написать в</span>
+            Telegram</a>
+        </li>
+      </ul>
+    </section>
+    <section class="footer__section footer-section footer-section--application footer__section--application">
+      <h2 class="footer-section__title footer-section__title--size-s">Скачайте наше приложение</h2>
+      <div class="footer-section__inner">
+        <picture>
+          <source srcset="./images/qr-bike-center.webp" width="114" height="114">
+          <img class="footer-section__qr" src="./images/qr-bike-center.jpg" alt="QR-код для скачивания нашего приложения." width="114" height="114">
+        </picture>
+        <ul class="footer-section__app-links-list">
+          <li class="footer-section__app-links-item">
+            <a class="footer-section__app-links-link footer-section__app-links-link--app-store" href="#" target="_blank">
+              <span class="visually-hidden">Скачать в App Store</span>
+            </a>
+          </li>
+          <li class="footer-section__app-links-item">
+            <a class="footer-section__app-links-link footer-section__app-links-link--google-play" href="#" target="_blank">
+              <span class="visually-hidden">Скачать в Google Play</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="footer__section footer-section footer-section--subscribe footer__section--subscribe">
+      <h2 class="footer-section__title footer-section__title--size-s">Узнавай о скидках первым</h2>
+      <p class="footer-section__text footer-section__text--mobile-only">Подпишитесь на наши новости</p>
+      <form class="footer-section__subscribe-field" action="#" method="post">
+        <label class="visually-hidden" for="footer-subscribe">Поле ввода Email.</label>
+        <input class="footer-section__input" type="email" id="footer-subscribe" placeholder="Ведите свой e-mail" required>
+        <button class="footer-section__subscribe-button button">
+          <span>Подписаться</span>
+        </button>
+      </form>
+    </section>
+    <section class="footer__section footer-section footer-section--addresses footer__section--addresses">
+      <h2 class="footer-section__title footer-section__title--size-s">Адреса в <span>г. Краснодаре:</span></h2>
+      <div class="dropdown footer-section__dropdown">
+        <button class="dropdown__view footer-section__dropdown-view" data-type="footer-dropdown">
+          г. Краснодар, ул. Дорожная, 1Е (Яблоновский) и еще 3
+        </button>
+        <span class="dropdown__back-layout"></span>
+        <ul class="dropdown__list footer-section__list footer-section__list--dropdown">
+          <li class="footer-section__item">
+            <a class="footer-section__link" href="https://yandex.ru/maps/org/bayk_tsentr/1090113141/?ll=38.955385%2C44.990985&z=18.88" target="_blank">
+              ул. Дорожная, 1Е (Яблоновский)
+            </a>
+          </li>
+          <li class="footer-section__item">
+            <a class="footer-section__link" href="https://yandex.ru/maps/35/krasnodar/?ll=39.052877%2C45.022324&mode=poi&poi%5Bpoint%5D=39.052581%2C45.022383&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D1257501045&z=18.06" target="_blank">
+              ул. Сормовская, 2а
+            </a>
+          </li>
+          <li class="footer-section__item">
+            <a class="footer-section__link" href="https://yandex.ru/maps/35/krasnodar/?ll=38.930469%2C45.057129&mode=poi&poi%5Bpoint%5D=38.930509%2C45.056920&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D1657517741&z=17.06" target="_blank">
+              ул. Красных Партизан, 237
+            </a>
+          </li>
+          <li class="footer-section__item">
+            <a class="footer-section__link" href="https://yandex.ru/maps/35/krasnodar/?ll=39.014666%2C45.080451&mode=poi&poi%5Bpoint%5D=39.014545%2C45.080253&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D68161064124&z=19.46" target="_blank">
+              ул. Российская, 131/5
+            </a>
+          </li>
+        </ul>
+      </div>
+      <p class="footer-section__work-times">С 9:00 до 20:00 без выходных</p>
+    </section>
+    <section class="footer__section footer-section footer-section--social footer__section--social">
+      <h2 class="visually-hidden">Ссылки на нас в социальных сетях.</h2>
+      <ul class="footer-section__social social">
+        <li class="social__item">
+          <a class="social__link social__link--vk" href="#" target="_blank">
+            <span class="visually-hidden">Вконтакте.</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--youtube" href="#" target="_blank">
+            <span class="visually-hidden">Ютуб.</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--tik-tok" href="#" target="_blank">
+            <span class="visually-hidden">Тик-ток.</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+  </div>
+  <div class="footer__copyright">
+    <div class="container">
+      <p class="footer__copyright-text">© 2022</p>
+      <p class="footer__copyright-text">
+        <span class="footer__copyright-text-mobile-only">
+          Интернет-магазин "Байк Центр" ® bike-сentre.ru
+        </span>
+        <span class="footer__copyright-text-desktop-only">
+          Сеть магазинов "Байк Центр" ® — bike-сentre.ru
+        </span>
+      </p>
+    </div>
+  </div>
 </footer>
-
-<!--Удалить-->
-<div style="height: 100vh"></div>
 </body>
 </html>

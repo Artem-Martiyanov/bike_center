@@ -15,12 +15,13 @@
   background-color: $button-secondary-dark;
   
   &--primary {
-    
+    border-radius: 10px;
     font-size: 14px;
     font-weight: 600;
     padding: 15px 35px;
     color: $primary-light-font;
     background-color: $button-primary-dark;
+    min-width: 216px;
   }
   
   &:not(&--disabled):hover, &:not(&--disabled):focus-visible {

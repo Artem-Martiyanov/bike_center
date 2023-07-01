@@ -75,7 +75,9 @@
       
       background-image: url("../images/help.png");
       background-image: image-set(
+          url("../images/help@2x.webp") 2x,
           url("../images/help.webp") 1x,
+          url("../images/help@2x.png") 2x,
           url("../images/help.png") 1x,
       );
       
@@ -123,8 +125,15 @@
         width: 100%;
         text-align: center;
       }
+      
+      .feature-card__title {
+        max-width: 290px;
+      }
+      
+      .feature-card__text {
+        font-size: 16px;
+      }
     }
-    
   }
   
   &--payment {
@@ -138,16 +147,18 @@
     
     &::before {
       position: absolute;
-      top: -38px;
+      top: -50px;
       right: 6px;
       width: 206px;
-      height: 207px;
+      height: 255px;
       content: "";
       transition: transform $transition-duration ease;
       
       background-image: url("../images/payment.png");
       background-image: image-set(
+          url("../images/payment@2x.webp") 2x,
           url("../images/payment.webp") 1x,
+          url("../images/payment@2x.png") 2x,
           url("../images/payment.png") 1x,
       );
       
@@ -267,7 +278,9 @@
       
       background-image: url("../images/bonus-main.png");
       background-image: image-set(
+          url("../images/bonus-main@2x.webp") 2x,
           url("../images/bonus-main.webp") 1x,
+          url("../images/bonus-main@2x.png") 2x,
           url("../images/bonus-main.png") 1x,
       );
       
@@ -286,7 +299,9 @@
       
       background-image: url("../images/bonus-coins.png");
       background-image: image-set(
+          url("../images/bonus-coins@2x.webp") 2x,
           url("../images/bonus-coins.webp") 1x,
+          url("../images/bonus-coins@2x.png") 2x,
           url("../images/bonus-coins.png") 1x,
       );
       
@@ -386,7 +401,9 @@
       
       background-image: url("../images/return-easy.png");
       background-image: image-set(
+          url("../images/return-easy@2x.webp") 2x,
           url("../images/return-easy.webp") 1x,
+          url("../images/return-easy@2x.png") 2x,
           url("../images/return-easy.png") 1x,
       );
       
@@ -425,14 +442,16 @@
       position: absolute;
       top: -14px;
       right: 42px;
-      width: 329px;
+      width: 304px;
       height: 180px;
       content: "";
       transition: transform 0.3s ease;
       
       background-image: url("../images/delivery.png");
       background-image: image-set(
+          url("../images/delivery@2x.webp") 2x,
           url("../images/delivery.webp") 1x,
+          url("../images/delivery@2x.png") 2x,
           url("../images/delivery.png") 1x,
       );
       
@@ -488,9 +507,17 @@
     }
     
     @media (max-width: $mobile-width) {
-      .features-card__button {
+      padding-top: 120px;
+      
+      .feature-card__button {
         width: 100%;
         text-align: center;
+      }
+      
+      &::before {
+        background-size: contain;
+        width: 260px;
+        height: 143px;
       }
     }
   }

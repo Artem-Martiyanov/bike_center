@@ -1,0 +1,46 @@
+@use "../../variables" as *;
+@use "../../mixins" as *;
+
+.dropdown {
+  position: relative;
+  
+  &__view {
+    margin: 0;
+    outline: none;
+    border: none;
+    background: none;
+    color: inherit;
+    font-size: inherit;
+    font-family: inherit;
+    cursor: pointer;
+  }
+  
+  &__list {
+    @include list-reset;
+    
+    display: none;
+    background-color: $button-secondary-dark;
+  }
+  
+  &--shown {
+    .dropdown__list {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block !important;
+      width: 100%;
+      padding: 10px;
+      border-radius: 7px;
+    }
+    
+    .dropdown__back-layout {
+      display: block;
+    }
+  }
+  
+  &__back-layout {
+    position: fixed;
+    display: none;
+    inset: 0;
+  }
+}

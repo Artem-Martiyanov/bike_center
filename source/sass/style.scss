@@ -5,6 +5,7 @@
 @use "components/ui/button";
 @use "components/ui/search";
 @use "components/ui/burger";
+@use "components/ui/dropdown";
 
 // Подключение компонентов
 @use "components/sup-nav";
@@ -21,3 +22,6 @@
 @use "components/feature-card";
 @use "components/info";
 @use "components/page";
+@use "components/footer-section";
+@use "components/social";
+@use "components/footer";

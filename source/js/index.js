@@ -15,6 +15,18 @@ document.addEventListener('pointerdown', (evt) => {
     const searchButton = evt.target
     searchButton.closest('.search').classList.toggle('search--shown')
   }
+  if (dataset.type === 'footer-dropdown') {
+    
+    const dropdown = evt.target.closest('.dropdown')
+    dropdown.classList.add('dropdown--shown')
+    
+    const dropdownCloseArea = dropdown.querySelector('.dropdown__back-layout')
+    const dropDownCloseHandler = () => {
+      dropdown.classList.remove('dropdown--shown')
+      dropdownCloseArea.removeEventListener('pointerdown', dropDownCloseHandler)
+    }
+    dropdownCloseArea.addEventListener('pointerdown', dropDownCloseHandler)
+  }
   
 })
 
