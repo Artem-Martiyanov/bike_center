@@ -27,6 +27,5 @@ document.addEventListener('pointerdown', (evt) => {
     }
     dropdownCloseArea.addEventListener('pointerdown', dropDownCloseHandler)
   }
-  
 })
 
