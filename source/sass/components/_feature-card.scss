@@ -39,6 +39,7 @@
     transition: color $transition-duration ease;
     letter-spacing: 0.14px;
     color: $third-dark-font;
+    outline: none;
     
     &:hover, &:focus-visible {
       color: $font-color-accent;

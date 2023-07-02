@@ -49,6 +49,7 @@
     transition: color $transition-duration ease;
     text-decoration: none;
     color: inherit;
+    outline: none;
     
     &--whatsapp,
     &--telegram {
@@ -145,6 +146,7 @@
   }
   
   &__app-links-link {
+    outline: none;
     display: block;
     min-width: 165px;
     height: 49px;
@@ -245,9 +247,9 @@
   
   &__dropdown-view {
     display: none;
-    text-decoration: underline;
-    padding: 0;
     margin: 0;
+    padding: 0;
+    text-decoration: underline;
   }
   
   &__work-times {

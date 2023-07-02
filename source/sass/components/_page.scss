@@ -82,6 +82,7 @@
       text-decoration: none;
       letter-spacing: 0.24px;
       color: $third-dark-font;
+      outline: none;
       
       &:hover, &:focus-visible {
         color: $font-color-accent;
