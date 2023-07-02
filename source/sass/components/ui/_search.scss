@@ -43,7 +43,6 @@
       background-color: $primary-light-font;
       mask: url("../images/icons/search-icon.svg") no-repeat center;
     }
-    
   }
   
   @media (max-width: $tablet-width) {
@@ -66,6 +65,12 @@
       height: 30px;
       margin: 0;
       background: transparent;
+  
+      &::after {
+        width: 22px;
+        height: 22px;
+        mask-size: contain;
+      }
     }
     
     &__button:not(&--disabled):hover {

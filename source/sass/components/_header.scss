@@ -10,16 +10,18 @@
   &__container {
     display: flex;
     align-items: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 7px;
     
     @media (max-width: $tablet-width) {
+      padding-top: 14px;
+      padding-bottom: 14px;
       background-color: $main-dark;
     }
   }
   
   &__burger {
     display: none;
+    margin-left: -2px;
     
     @media (max-width: $tablet-width) {
       display: block;
@@ -46,12 +48,13 @@
     @media (max-width: $tablet-width) {
       display: flex;
       min-width: 120px;
-      margin-left: 60px;
+      margin-bottom: -5px;
+      margin-left: 62px;
+      margin-right: auto;
       
       img {
         display: inline-block;
         margin-bottom: 0;
-        margin-top: -5px;
       }
     }
   }
@@ -96,11 +99,12 @@
   
   &__search {
     width: 100%;
-    max-width: 643px;
+    max-width: 725px;
     margin-right: auto;
     
     @media (max-width: $tablet-width) {
       justify-content: flex-end;
+      margin-right: 12px;
     }
   }
   
@@ -109,6 +113,7 @@
     
     @media (max-width: $tablet-width) {
       margin: 0;
+      padding-top: 0;
     }
   }
   

@@ -19,7 +19,7 @@
     @include list-reset;
     
     &--phones {
-      margin-bottom: 19px;
+      margin-bottom: 14px;
     }
     
     &--social {
@@ -146,7 +146,6 @@
   }
   
   &__app-links-link {
-    outline: none;
     display: block;
     min-width: 165px;
     height: 49px;
@@ -154,6 +153,7 @@
     text-decoration: none;
     color: inherit;
     border-radius: 7px;
+    outline: none;
     background-color: $third-dark-font;
     background-repeat: no-repeat;
     background-position: center;
@@ -258,6 +258,10 @@
   }
   
   &--application {
+    .footer-section__title {
+      margin-top: 24px;
+    }
+    
     .footer-section__inner {
       display: flex;
       gap: 40px;
@@ -265,8 +269,8 @@
   }
   
   &--addresses {
-    
     .footer-section__title {
+      margin-top: 17px;
       margin-bottom: 11px;
     }
     
@@ -328,6 +332,8 @@
         @include pt-sans;
         position: relative;
         z-index: 1;
+        margin-top: 7px;
+        margin-bottom: 1.5em;
       }
       
       .footer-section__qr, picture {
@@ -352,6 +358,7 @@
       
       .footer-section__app-links-link {
         min-width: auto;
+        height: 42px;
         background-color: $main-dark;
         
         &:hover, &:focus-visible {
@@ -383,7 +390,7 @@
       }
       
       .footer-section__dropdown {
-        margin-bottom: 10px;
+        margin-bottom: 16px;
       }
       
       .footer-section__dropdown-view {
@@ -398,7 +405,9 @@
       }
       
       .footer-section__work-times {
+        line-height: normal;
         display: block;
+        letter-spacing: 0.32px;
       }
     }
     
@@ -460,17 +469,20 @@
     &--help {
       position: relative;
       
-      padding-bottom: 20px;
+      padding-bottom: 12px;
       
       .footer-section__title {
         @include sf-pro;
         font-size: 20px;
         font-style: normal;
         line-height: normal;
+        margin-bottom: 14px;
       }
       
       .footer-section__link {
         position: relative;
+        padding-top: 10px;
+        padding-bottom: 12px;
         padding-left: 30px;
         
         &::before {
@@ -527,6 +539,11 @@
           order: 1;
         }
       }
+      
+      .footer-section__link {
+        padding-top: 6px;
+        padding-bottom: 12px;
+      }
     }
     
     &--subscribe {
@@ -536,7 +553,7 @@
       
       .footer-section__text {
         font-size: 14px;
-        margin: 0 0 12px 0;
+        margin: 0 0 2px 0;
         color: #bdbdbd;
       }
       
@@ -567,7 +584,8 @@
       
       .footer-section__subscribe-button {
         position: relative;
-        width: 58px;
+        width: 68px;
+        padding: 0;
         background-color: $third-light-font;
         
         span {

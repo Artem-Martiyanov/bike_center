@@ -19,6 +19,7 @@
   &__text {
     font-size: 14px;
     line-height: 24px;
+    margin-bottom: 11px;
     letter-spacing: 0.14px;
     color: $primary-dark-font;
   }
@@ -27,8 +28,8 @@
     @include list-reset;
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    
+    margin-bottom: 6px;
+    gap: 19px;
   }
   
   &__payment-link {
@@ -72,7 +73,7 @@
       height: 210px;
       content: "";
       transition: transform $transition-duration ease;
-      transform: translateX(-50%);
+      transform: translateX(-55%);
       
       background-image: url("../images/help.png");
       background-image: image-set(
@@ -133,6 +134,8 @@
       
       .feature-card__text {
         font-size: 16px;
+        margin-top: 2px;
+        margin-bottom: 15px;
       }
     }
   }
@@ -148,9 +151,9 @@
     
     &::before {
       position: absolute;
-      top: -50px;
-      right: 6px;
-      width: 206px;
+      top: -45px;
+      right: -14px;
+      width: 229px;
       height: 255px;
       content: "";
       transition: transform $transition-duration ease;
@@ -185,7 +188,7 @@
       background: none;
       
       .feature-card__title {
-        margin-bottom: 12px;
+        margin-bottom: 6px;
       }
       
       &::before {
@@ -217,7 +220,7 @@
         position: relative;
         display: inline-block;
         width: 100%;
-        padding: 14px 0;
+        padding: 13px 0;
         text-decoration: none;
         letter-spacing: 0;
         
@@ -247,6 +250,7 @@
     min-height: auto;
     padding-top: 33px;
     padding-right: 300px;
+    padding-left: 55px;
     color: $primary-light-font;
     background: $main-accent;
     
@@ -271,7 +275,7 @@
     &::before {
       position: absolute;
       top: 9px;
-      right: 70px;
+      right: 94px;
       width: 189px;
       height: 149px;
       content: "";
@@ -292,7 +296,7 @@
     &::after {
       position: absolute;
       top: -18px;
-      right: 14px;
+      right: 36px;
       width: 330px;
       height: 216px;
       content: "";
@@ -321,6 +325,7 @@
     }
     
     @media (max-width: $tablet-width) {
+      margin-top: -9px;
       padding: 20px 20px 30px 20px;
       
       .feature-card__title {
@@ -340,6 +345,8 @@
     flex-direction: row;
     justify-content: space-between;
     min-height: auto;
+    padding-right: 55px;
+    padding-left: 55px;
     
     .feature-card__title {
       font-size: 26px;
@@ -427,6 +434,7 @@
     position: relative;
     min-height: auto;
     padding-right: 330px;
+    padding-left: 55px;
     
     .feature-card__title {
       font-size: 26px;
@@ -442,7 +450,7 @@
     &::before {
       position: absolute;
       top: -14px;
-      right: 42px;
+      right: 61px;
       width: 304px;
       height: 180px;
       content: "";
@@ -469,13 +477,15 @@
     @media (max-width: $tablet-width) {
       position: relative;
       align-items: center;
-      margin-top: 80px;
+      margin-top: 88px;
       padding: 150px 30px 30px;
       
       .feature-card__text {
         font-size: 16px;
         max-width: 100%;
+        margin-top: 5px;
         margin-right: 0;
+        margin-bottom: 17px;
         letter-spacing: 0.16px;
       }
       
@@ -489,20 +499,20 @@
       
       .feature-card__title {
         position: absolute;
-        top: -80px;
+        top: -88px;
         left: 0;
       }
       
       &::before {
-        top: -24px;
+        top: -25px;
         right: auto;
         left: 50%;
-        transform: translateX(-50%);
+        transform: translateX(-53%);
       }
       
       &:hover {
         &::before {
-          transform: translateX(-54%);
+          transform: translateX(-58%);
         }
       }
     }
@@ -516,9 +526,9 @@
       }
       
       &::before {
-        background-size: contain;
         width: 260px;
         height: 143px;
+        background-size: contain;
       }
     }
   }

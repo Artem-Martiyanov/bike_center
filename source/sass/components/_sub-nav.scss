@@ -9,7 +9,7 @@
     @include list-reset;
     display: flex;
     flex-wrap: wrap;
-    column-gap: 26px;
+    column-gap: 28px;
     
     &:not(&--right) {
       margin-right: 30px;
@@ -17,6 +17,7 @@
     
     &--right {
       justify-content: flex-end;
+      padding-top: 2px;
     }
     
     @media (max-width: $tablet-width) {

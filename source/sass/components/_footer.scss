@@ -7,10 +7,10 @@
   &__container {
     display: grid;
     width: 100%;
-    padding-top: 74px;
+    padding-top: 56px;
     padding-bottom: 57px;
     column-gap: 20px;
-    grid-template-columns: minmax(250px, 419px) minmax(250px, 372px) minmax(250px, 435px) minmax(300px, 319px);
+    grid-template-columns: minmax(250px, 398px) minmax(250px, 355px) minmax(250px, 415px) minmax(300px, 319px);
     grid-auto-flow: row;
   }
   
@@ -166,6 +166,7 @@
       padding-top: 0;
       padding-bottom: 20px;
       grid-template-columns: 1fr;
+      row-gap: 18px;
     }
     
     &__section {
@@ -205,7 +206,7 @@
     }
     
     &__copyright {
-      padding: 33px 0 22px 0;
+      padding: 29px 0 22px 0;
       color: #f2f2f2;
     }
     

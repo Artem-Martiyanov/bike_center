@@ -14,17 +14,25 @@
       @media (max-width: $mobile-width) {
         display: block;
         
+        .info__card-title {
+          margin: 2.3em 0 0.5em 0;
+        }
+        
+        .info__card-text {
+          margin-top: 1.2em;
+        }
+        
         .info__card-button {
           width: 100%;
           text-align: center;
           
           span::after {
-            display: inline-block;
-            margin-left: 24px;
-            margin-bottom: -5px;
             right: 50px;
+            display: inline-block;
             width: 20px;
             height: 20px;
+            margin-bottom: -5px;
+            margin-left: 24px;
             content: "";
             background: $primary-light-font;
             mask: url("../images/icons/arrow-icon.svg") no-repeat center;
@@ -36,7 +44,7 @@
     @media (max-width: $mobile-width) {
       &--return-easy {
         position: relative;
-        margin-top: 120px;
+        margin-top: 115px;
         padding: 170px 16px 25px 16px;
         border-radius: 20px;
         
@@ -44,20 +52,23 @@
         
         &::before {
           position: absolute;
-          top: -28px;
-          left: -12px;
-          width: 300px;
-          height: 200px;
+          top: -31px;
+          left: -13px;
+          width: 100%;
+          max-width: 286px;
+          height: 192px;
           content: "";
-          background: url("../images/return-easy.png") no-repeat center;
+          background: url("../images/return-easy.png") no-repeat center / contain;
         }
         
         .info__card-title {
           position: absolute;
-          top: -120px;
+          top: -105px;
+          left: 0;
         }
         
         .info__card-list {
+          margin-top: 1em;
           margin-bottom: 0;
         }
         
@@ -69,8 +80,14 @@
           font-weight: 600;
           line-height: 22px;
           display: block;
+          margin-top: 0;
         }
-        
+      }
+      
+      &--feedback {
+        .info__card-title {
+          margin-top: 1.4em;
+        }
       }
     }
   }
@@ -79,13 +96,21 @@
     font-size: 26px;
     font-weight: 700;
     line-height: 24px;
-    margin: 1.5em 0 1em 0;
+    margin: 1.8em 0 1.1em 0;
     color: inherit;
+    
+    @media (max-width: $tablet-width) {
+      margin: 1em 0 1.1em 0;
+    }
   }
   
   &__card-list {
-    margin: 1.5em 0 3em;
-    padding-left: 1.5em;
+    margin: 1.6em 0 3.3em;
+    padding-left: 2em;
+    
+    @media (max-width: $tablet-width) {
+      padding-left: 1.5em;
+    }
   }
   
   &__card-item {
@@ -107,6 +132,9 @@
   }
   
   &__question {
+    margin-top: 68px;
+    padding-left: 10px;
+    
     @media (max-width: $mobile-width) {
       display: none;
     }

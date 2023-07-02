@@ -79,35 +79,35 @@
   
   @media (max-width: $desktop-1250-width) {
     grid-template-columns: 1fr;
-  
+    
     &__card {
       &--help {
         grid-row: auto;
         grid-column: auto;
       }
-    
+      
       &--delivery {
+        margin-top: 0;
         grid-row: auto;
         grid-column: auto;
-        margin-top: 0;
       }
-    
+      
       &--bonus {
         grid-row: auto;
         grid-column: auto;
       }
-    
+      
       &--payment {
         grid-row: auto;
         grid-column: auto;
       }
-    
+      
       &--return-easy {
+        margin-top: 0;
         grid-row: auto;
         grid-column: auto;
-        margin-top: 0;
       }
-    
+      
       &--guarantee {
         grid-row: auto;
         grid-column: auto;
@@ -116,6 +116,6 @@
   }
   
   @media (max-width: $tablet-width) {
-    gap: 20px;
+    gap: 28px;
   }
 }

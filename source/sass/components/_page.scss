@@ -8,8 +8,13 @@
   
   &__main {
     flex: 1;
-    padding-top: 20px;
-    padding-bottom: 100px;
+    padding-top: 12px;
+    padding-bottom: 75px;
+  
+    @media (max-width: $tablet-width) {
+      padding-top: 22px;
+      padding-bottom: 69px;
+    }
   }
   
   &__heading {
@@ -21,7 +26,7 @@
   }
   
   &__breadcrumbs {
-    margin-bottom: 26px;
+    margin-bottom: 22px;
     
     @media (max-width: $mobile-550-width) {
       display: none;
@@ -36,7 +41,7 @@
     @media (max-width: $mobile-550-width) {
       align-items: flex-start;
       flex-direction: column;
-      gap: 26px;
+      gap: 35px;
     }
   }
   
@@ -51,7 +56,7 @@
     align-items: baseline;
     flex-wrap: wrap;
     justify-content: flex-end;
-    margin: 0 0 0 30px;
+    margin: -8px 27px 0 30px;
     color: $main-dark;
     column-gap: 40px;
     

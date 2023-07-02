@@ -23,7 +23,7 @@
   &__location {
     position: relative;
     min-width: 150px;
-    margin: 0 100px 0 0;
+    margin: 0 80px 0 0;
     padding: 5px 5px 5px 21px;
     cursor: pointer;
     transition: color $transition-duration ease;
@@ -73,8 +73,9 @@
   }
   
   &__address {
+    font-size: 12px;
     min-width: 172px;
-    margin: 0 35px 0 0;
+    margin: 0 22px 0 0;
     cursor: pointer;
     transition: color $transition-duration ease;
     text-decoration: underline;
@@ -104,7 +105,7 @@
     font-weight: 700;
     display: flex;
     margin-right: auto;
-    column-gap: 30px;
+    column-gap: 20px;
     
     @media (max-width: $desktop-1550-width) {
       flex-direction: column;
@@ -124,7 +125,7 @@
       &::after {
         position: absolute;
         @include absolute-vertical-align;
-        right: -18px;
+        right: -13px;
         display: inline-block;
         content: "|";
       }
@@ -180,7 +181,7 @@
   }
   
   &__services {
-    margin-right: 22px;
+    margin-right: 25px;
     
     @media (max-width: $tablet-820-width) {
       display: none;
